@@ -26,6 +26,7 @@ body {
 }
 
 .photo.ng-enter {
+    transition-delay: 200ms;
     transform: rotateX(-90deg);
     opacity: 0;
 }
