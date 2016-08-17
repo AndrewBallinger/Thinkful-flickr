@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script data-require="angular-animate.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular-animate.js"></script>
+    <script src="flickrApp.js"></script></head>
+
+  <body ng-app="FlickrApp">
+    <div class="content" ng-controller="FlickrCtrl as flickr">
+      <h1> Flickr Searcher </h1>
+
+      <form class="search" ng-submit="flickr.searchSubmitted()">
+        <input
+           ng-model="flickr.searchInput"
+           placeholder="Enter a tag to search for"
+           required ></input>
+        <button>Submit</button></form>
+
+      <div class="prompt" ng-if="flickr.prompt.length > 0">
+        {{ flickr.prompt }}</div>
+
+      <div class="photo"
+           ng-repeat="url in flickr.photos"
+           ng-style="{{ flickr.decorateStyle(url) }}"
+           ng-show="true"></div></div></body></html>
+

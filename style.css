@@ -1,0 +1,52 @@
+/* Styles go here */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family : "Comic Sans MS", cursive, sans-serif;
+    height: 100%;
+    line-height: 4em;
+    perspective: 5000px;
+    perspective-origin: 50%, 50%;
+}
+
+.photo {
+    float:left;
+    position: relative;
+    width: 30%;
+    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+    transition: all linear 0.3s;
+    background-color: gray;
+}
+
+.photo.ng-enter {
+    transform: rotateX(-90deg);
+    opacity: 0;
+}
+
+.photo.ng-leave-active {
+    transform: rotateX(-90deg);
+    opacity: 0;
+}
+
+h1 {
+    width: 100%;
+    text-align:center;
+}
+
+.search {
+    width: 100%;
+    text-align: center;
+}
+
+.prompt {
+    width: 100%;
+    text-align: center;
+
+}
